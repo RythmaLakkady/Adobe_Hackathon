@@ -260,7 +260,7 @@ def improved_extract_title(headings):
 
 def extract_outline(pdf_path):
     """Extract structured outline from PDF with improved logic"""
-    print(f"Processing: {pdf_path}")
+    print(f"Processing: {os.path.basename(pdf_path)}")
     font_data = analyze_font_characteristics(pdf_path)
     thresholds = determine_heading_thresholds(font_data)
     print(f"Font thresholds: {thresholds}")
@@ -348,8 +348,7 @@ def extract_outline(pdf_path):
     # Remove title from outline if it appears as first heading
     if final_headings and clean_heading_text(final_headings[0]['text']) == clean_heading_text(title):
         final_headings = final_headings[1:]
-    print(f"\nExtracted {len(final_headings)} headings")
-    print(f"Title: {title}")
+    print(f"Found {len(final_headings)} headings. Title: {title}")
     return {"title": title, "outline": final_headings}
 
 def main():
@@ -360,31 +359,21 @@ def main():
     pdf_files = [f for f in os.listdir(input_dir) if f.lower().endswith('.pdf')]
     
     if not pdf_files:
-        print(f"No PDF files found in {input_dir} directory")
+        print(f"No PDFs found.")
         return
     
     for filename in pdf_files:
-        print(f"\n{'='*50}")
-        print(f"Processing: {filename}")
-        print(f"{'='*50}")
-        
+        print(f"Processing {filename}")
         full_path = os.path.join(input_dir, filename)
-        
         try:
             result = extract_outline(full_path)
-            
             output_filename = os.path.splitext(filename)[0] + ".json"
             output_path = os.path.join(output_dir, output_filename)
-            
             with open(output_path, "w", encoding="utf-8") as f:
                 json.dump(result, f, indent=2, ensure_ascii=False)
-            
-            print(f"\nOutput saved to: {output_path}")
-            print(f"Title: {result['title']}")
-            print(f"Found {len(result['outline'])} headings")
-            
+            print(f"Saved: {output_filename}")
         except Exception as e:
-            print(f"Error processing {filename}: {str(e)}")
+            print(f"Error: {filename}")
 
 if __name__ == "__main__":
     main()
