@@ -217,8 +217,8 @@ def score_sections_rule_based(sections, persona, job, keywords):
 # --- Main Pipeline ---
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input', type=str, default='input.json', help='Path to input JSON file')
-    parser.add_argument('--output', type=str, default='output.json', help='Path to output JSON file')
+    parser.add_argument('--input', type=str, default='challenge1b_input.json', help='Path to input JSON file')
+    parser.add_argument('--output', type=str, default='challenge1b_output.json', help='Path to output JSON file')
     parser.add_argument('--pdf_dir', type=str, default='PDFs', help='Directory containing PDF files')
     parser.add_argument('--top_n', type=int, default=5, help='Number of top sections to extract')
     args = parser.parse_args()

@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "input_documents": [
+      "South of France - Cities.pdf",
+      "South of France - Cuisine.pdf",
+      "South of France - History.pdf",
+      "South of France - Restaurants and Hotels.pdf",
+      "South of France - Things to Do.pdf",
+      "South of France - Tips and Tricks.pdf",
+      "South of France - Traditions and Culture.pdf"
+    ],
+    "persona": "Travel Planner",
+    "job_to_be_done": "Plan a trip of 4 days for a group of 10 college friends.",
+    "processing_timestamp": "2025-07-28T19:28:37.707757"
+  },
+  "extracted_sections": [
+    {
+      "document": "South of France - Cities.pdf",
+      "section_title": "• Transportation: The region is well-connected by an extensive network of trains,",
+      "importance_rank": 1,
+      "page_number": 2
+    },
+    {
+      "document": "South of France - Things to Do.pdf",
+      "section_title": "• Nice: Visit the sandy shores and enjoy the vibrant Promenade des Anglais. • Antibes: Relax on the pebbled beaches and explore the charming old town. • Saint-Tropez: Experience the exclusive beach clubs and glamorous atmosphere.",
+      "importance_rank": 2,
+      "page_number": 2
+    },
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "• Reusable Bags: Pack a few reusable bags for laundry, shoes, or shopping. • First Aid Kit: Include a small first aid kit with band-aids, antiseptic wipes, and any",
+      "importance_rank": 3,
+      "page_number": 2
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "section_title": "Upscale Restaurants",
+      "importance_rank": 4,
+      "page_number": 4
+    },
+    {
+      "document": "South of France - Cuisine.pdf",
+      "section_title": "Wine Regions and Types of Wines",
+      "importance_rank": 5,
+      "page_number": 5
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "South of France - Cities.pdf",
+      "refined_text": "Key Attractions • Old Port (Vieux-Port): The heart of Marseille, the Old Port has been a bustling harbor for over 2,600 years",
+      "page_number": 2
+    },
+    {
+      "document": "South of France - Things to Do.pdf",
+      "refined_text": "• Saint-Tropez: Experience the exclusive beach clubs and glamorous atmosphere",
+      "page_number": 2
+    },
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "refined_text": "• First Aid Kit: Include a small first aid kit with band-aids, antiseptic wipes, and any necessary medications",
+      "page_number": 2
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "refined_text": "The cozy rooms and friendly service make it a pleasant stay",
+      "page_number": 4
+    },
+    {
+      "document": "South of France - Cuisine.pdf",
+      "refined_text": "The region also produces excellent whites and rosés",
+      "page_number": 5
+    }
+  ]
+}

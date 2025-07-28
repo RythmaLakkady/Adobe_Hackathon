@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "input_documents": [
+      "Breakfast Ideas.pdf",
+      "Dinner Ideas - Mains_1.pdf",
+      "Dinner Ideas - Mains_2.pdf",
+      "Dinner Ideas - Mains_3.pdf",
+      "Dinner Ideas - Sides_1.pdf",
+      "Dinner Ideas - Sides_2.pdf",
+      "Dinner Ideas - Sides_3.pdf",
+      "Dinner Ideas - Sides_4.pdf",
+      "Lunch Ideas.pdf"
+    ],
+    "persona": "Food Contractor",
+    "job_to_be_done": "Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+    "processing_timestamp": "2025-07-28T19:33:23.801352"
+  },
+  "extracted_sections": [
+    {
+      "document": "Dinner Ideas - Sides_3.pdf",
+      "section_title": "Macaroni and Cheese",
+      "importance_rank": 1,
+      "page_number": 8
+    },
+    {
+      "document": "Dinner Ideas - Sides_1.pdf",
+      "section_title": "Bratkartoffeln (Fried Potatoes)",
+      "importance_rank": 2,
+      "page_number": 9
+    },
+    {
+      "document": "Lunch Ideas.pdf",
+      "section_title": "Hummus and Veggie Pita",
+      "importance_rank": 3,
+      "page_number": 3
+    },
+    {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "section_title": "Chicken Cacciatore",
+      "importance_rank": 4,
+      "page_number": 8
+    },
+    {
+      "document": "Dinner Ideas - Sides_4.pdf",
+      "section_title": "Pajeon (Pancakes)",
+      "importance_rank": 5,
+      "page_number": 1
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "Dinner Ideas - Sides_3.pdf",
+      "refined_text": "o Garnish with sliced green onions and serve",
+      "page_number": 8
+    },
+    {
+      "document": "Dinner Ideas - Sides_1.pdf",
+      "refined_text": "o Drain on paper towels and serve warm",
+      "page_number": 9
+    },
+    {
+      "document": "Lunch Ideas.pdf",
+      "refined_text": "• Spread hummus inside each pocket",
+      "page_number": 3
+    },
+    {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "refined_text": "• Garnish with chopped cilantro and serve",
+      "page_number": 8
+    },
+    {
+      "document": "Dinner Ideas - Sides_4.pdf",
+      "refined_text": "o Grate tomatoes and spread on bread",
+      "page_number": 1
+    }
+  ]
+}
