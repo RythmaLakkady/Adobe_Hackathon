@@ -1,5 +1,6 @@
 import os
 import json
+
 import datetime
 import re
 import unicodedata
@@ -45,6 +46,7 @@ def keyword_overlap_score(text, keywords):
     text_l = text.lower()
     return sum(1 for k in keywords if k in text_l)
 
+
 def collect_ltchars(container):
     chars = []
     if hasattr(container, '__iter__'):
@@ -54,6 +56,7 @@ def collect_ltchars(container):
             elif hasattr(obj, '__iter__'):
                 chars.extend(collect_ltchars(obj))
     return chars
+
 
 def fuzzy_match(text, patterns, threshold=0.7):
     text_l = text.lower()
@@ -78,6 +81,7 @@ def extract_sections_expected(pdf_path):
             if isinstance(element, LTTextContainer):
                 for text_line in element:
                     line_text = clean_text(text_line.get_text())
+
                     if not line_text:
                         continue
                     chars = collect_ltchars(text_line)
@@ -89,6 +93,7 @@ def extract_sections_expected(pdf_path):
                     is_bold = any('bold' in name.lower() for name in font_names if name)
                     is_italic = any('italic' in name.lower() or 'oblique' in name.lower() for name in font_names if name)
                     y_position = getattr(text_line, 'y0', 0)
+
                     lines.append({
                         "text": line_text,
                         "font_size": avg_font,
@@ -285,10 +290,12 @@ def main():
             "persona": persona,
             "job_to_be_done": job,
             "processing_timestamp": datetime.datetime.now().isoformat()
+
         },
         "extracted_sections": [
             {
                 "document": sec["document"],
+
                 "section_title": sec["title"],
                 "importance_rank": i+1,
                 "page_number": sec["page"]
@@ -304,3 +311,4 @@ def main():
 
 if __name__ == "__main__":
     main() 
+
